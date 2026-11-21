@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <title>SNAPTRACK — Public Profile Search</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-icon">S</span> SNAPTRACK</a>
+  <span class="api-state" id="apiState">CHECKING API</span>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">OFFICIAL PUBLIC PROFILE LOOKUP</p>
+    <h1>Discover public<br><span>Snap profiles.</span></h1>
+    <p class="sub">Search Snapchat's eligible public-profile directory using its authorized API.</p>
+    <div class="connect-row">
+      <button class="connect" id="connectButton">Connect approved Snap API</button>
+      <span id="connectHint">API access and allowlisting required</span>
+    </div>
+    <form id="searchForm" class="search">
+      <span>@</span>
+      <input id="username" value="antonisssb" maxlength="64" placeholder="Snapchat username" autocomplete="off">
+      <button type="submit" id="searchButton">SEARCH ↗</button>
+    </form>
+    <p class="fine">No Snapchat password is requested. Search works only after an approved API connection.</p>
+    <p id="message" role="status"></p>
+  </section>
+  <section class="results">
+    <div class="section-head"><div><p class="eyebrow">LIVE API RESPONSE</p><h2>Search results</h2></div><span id="resultCount">WAITING</span></div>
+    <div id="results" class="result-list">
+      <div class="empty"><span>⌕</span><b>Ready to search</b><p>Connect the approved Snap API, then search a username.</p></div>
+    </div>
+  </section>
+  <section class="limits">
+    <p class="eyebrow">DATA TRANSPARENCY</p><h2>What this API can return</h2>
+    <div class="limit-grid">
+      <article><b>Public profile</b><span>Display name, description, username and image when returned.</span></article>
+      <article><b>Subscribers</b><span>Count only when Snapchat includes it in the API response.</span></article>
+      <article><b>Snapscore</b><span class="unavailable">Not exposed by this public search API.</span></article>
+      <article><b>Last active</b><span class="unavailable">Not exposed by this public search API.</span></article>
+    </div>
+  </section>
+  <footer>SNAPTRACK · Independent project · Not affiliated with Snap Inc.</footer>
+</main>
+</body>
+</html>
